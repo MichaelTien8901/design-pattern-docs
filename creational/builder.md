@@ -97,6 +97,18 @@ sequenceDiagram
 - The product is simple with few parts
 - Only one representation is needed
 
+## Trade-offs
+
+**Pros:**
+- Constructs complex objects step-by-step, allowing fine control over the process
+- Same construction process can produce different representations
+- Isolates complex construction code from business logic
+
+**Cons:**
+- Requires creating a separate builder class for each product type
+- Can be verbose — especially for simple objects with few fields
+- Director class may become unnecessary if clients drive the construction themselves
+
 ## Example Code
 
 ### C#

@@ -110,6 +110,18 @@ sequenceDiagram
 - You need to perform many distinct, unrelated operations on objects in a structure and want to avoid polluting their classes.
 - The element class hierarchy is stable but you frequently need to add new operations.
 
+## Trade-offs
+
+**Pros:**
+- Makes it easy to add new operations without modifying element classes
+- Groups related behavior together in the visitor class
+- Can accumulate state as it visits elements (useful for reporting)
+
+**Cons:**
+- Adding a new element class requires updating every visitor
+- Breaks encapsulation — visitors often need access to element internals
+- Can be overkill when the element hierarchy changes frequently
+
 ## Example Code
 
 ### C\#

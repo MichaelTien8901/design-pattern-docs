@@ -34,6 +34,7 @@ Welcome to the **Design Patterns Guide** — a comprehensive visual reference fo
 | | [Strategy]({% link behavioral/strategy.md %}) | Define a family of algorithms, encapsulate each one, and make them interchangeable |
 | | [Template Method]({% link behavioral/template-method.md %}) | Define the skeleton of an algorithm, deferring some steps to subclasses |
 | | [Visitor]({% link behavioral/visitor.md %}) | Represent an operation to be performed on elements of an object structure |
+| | [Interpreter]({% link behavioral/interpreter.md %}) | Define a grammar representation and an interpreter to evaluate sentences |
 
 ## How This Guide Is Organized
 

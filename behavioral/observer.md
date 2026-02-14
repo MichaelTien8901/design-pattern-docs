@@ -96,6 +96,18 @@ sequenceDiagram
 - A change to one object requires changing others, and you do not know how many objects need to change.
 - An object should be able to notify other objects without knowing who they are.
 
+## Trade-offs
+
+**Pros:**
+- Loose coupling — the subject doesn't need to know the concrete observer classes
+- New observers can be added at runtime without modifying the subject
+- Supports broadcast communication — one event, many listeners
+
+**Cons:**
+- Unexpected update cascades ("notify storms") when observers trigger further changes
+- Observers have no control over the order they're notified
+- Memory leaks can occur if observers forget to unsubscribe
+
 ## Example Code
 
 ### C\#

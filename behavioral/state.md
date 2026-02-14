@@ -98,6 +98,18 @@ sequenceDiagram
 - An object's behavior depends on its state, and it must change behavior at runtime.
 - Operations contain large conditional statements that depend on state.
 
+## Trade-offs
+
+**Pros:**
+- Eliminates large conditional statements (if/switch) for state-dependent behavior
+- Each state is encapsulated in its own class, following Single Responsibility
+- Adding new states doesn't require modifying existing state classes
+
+**Cons:**
+- Can be overkill for objects with only two or three simple states
+- Increases the number of classes in the system
+- State transitions can be hard to track when spread across multiple state classes
+
 ## Example Code
 
 ### C\#

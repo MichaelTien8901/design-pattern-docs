@@ -120,6 +120,18 @@ sequenceDiagram
 - You only have one product family
 - Products don't need to be used together as a family
 
+## Trade-offs
+
+**Pros:**
+- Guarantees that products from the same family are compatible with each other
+- Isolates concrete classes — client never sees implementation details
+- Makes swapping entire product families easy (e.g., switching themes or platforms)
+
+**Cons:**
+- Adding a new product type requires changing the abstract factory interface and all concrete factories
+- Can result in many classes for even moderately sized product families
+- Complex to set up when you only have one product family
+
 ## Example Code
 
 ### C#

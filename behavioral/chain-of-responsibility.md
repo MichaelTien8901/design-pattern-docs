@@ -94,6 +94,18 @@ sequenceDiagram
 - You want to issue a request to one of several objects without specifying the receiver explicitly.
 - The set of handlers or their order should be configurable at runtime.
 
+## Trade-offs
+
+**Pros:**
+- Decouples the sender from the receiver — the sender doesn't know which handler processes the request
+- Handlers can be added, removed, or reordered without changing client code
+- Each handler has a single responsibility — process or pass along
+
+**Cons:**
+- No guarantee that any handler will process the request — it may fall off the end of the chain
+- Can be hard to debug — tracing which handler handled (or dropped) a request requires logging
+- Performance can degrade with long chains if most handlers just pass the request through
+
 ## Example Code
 
 ### C\#

@@ -91,6 +91,18 @@ sequenceDiagram
 - You want to let clients extend only particular steps of an algorithm, not the whole algorithm or its structure.
 - You have several classes that contain nearly identical algorithms with minor differences.
 
+## Trade-offs
+
+**Pros:**
+- Promotes code reuse — common algorithm steps live in the base class
+- Subclasses only override the steps that vary, reducing duplication
+- The algorithm structure is controlled in one place (the template)
+
+**Cons:**
+- Subclasses are tightly coupled to the base class — changes to the template affect all subclasses
+- Can be hard to understand the full algorithm when steps are spread across multiple classes
+- Rigid structure — subclasses can only customize predefined hook points
+
 ## Example Code
 
 ### C\#

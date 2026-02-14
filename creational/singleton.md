@@ -79,6 +79,18 @@ sequenceDiagram
 {: .warning }
 > Singleton is often considered an anti-pattern in modern software design because it introduces global state and makes unit testing difficult. Consider dependency injection as an alternative.
 
+## Trade-offs
+
+**Pros:**
+- Guarantees exactly one instance exists, preventing resource duplication
+- Provides a global access point that's easy to use from anywhere
+- Lazy initialization — the instance is created only when first needed
+
+**Cons:**
+- Introduces hidden global state that makes unit testing difficult (hard to mock or reset)
+- Violates the Single Responsibility Principle — manages its own lifecycle and business logic
+- Can mask poor design — often a sign that dependency injection should be used instead
+
 ## Example Code
 
 ### C#

@@ -103,6 +103,18 @@ sequenceDiagram
 - Object creation is simple and unlikely to change
 - There's only one type of product — a simple constructor suffices
 
+## Trade-offs
+
+**Pros:**
+- Promotes loose coupling — client code works with interfaces, not concrete classes
+- Easy to extend with new product types without modifying existing code
+- Follows the Open/Closed Principle — open for extension, closed for modification
+
+**Cons:**
+- Increases the number of subclasses — each new product requires a new creator subclass
+- Can be over-engineering for simple object creation where a constructor would suffice
+- Adds indirection that can make the code harder to follow for simple cases
+
 ## Example Code
 
 ### C#

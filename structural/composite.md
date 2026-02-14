@@ -85,6 +85,18 @@ sequenceDiagram
 - You want to represent part-whole hierarchies of objects.
 - You want clients to treat individual objects and compositions uniformly.
 
+## Trade-offs
+
+**Pros:**
+- Treats individual objects and compositions uniformly — simplifies client code
+- Makes it easy to add new component types without changing existing code
+- Naturally represents tree structures (files/folders, UI, org charts)
+
+**Cons:**
+- Can make it hard to restrict which types of children a composite can contain
+- The generalized interface may not make sense for leaf objects (e.g., "add child" on a file)
+- Overly general designs can make the system harder to understand
+
 ## Example Code
 
 ### C#

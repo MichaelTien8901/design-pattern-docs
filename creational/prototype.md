@@ -91,6 +91,18 @@ sequenceDiagram
 - Objects are simple and cheap to create from scratch
 - Deep cloning is complex and error-prone for your domain
 
+## Trade-offs
+
+**Pros:**
+- Avoids the cost of creating objects from scratch when initialization is expensive
+- Reduces subclassing — clone and modify instead of creating new subclasses for variants
+- Lets you add and remove objects at runtime by registering prototypes
+
+**Cons:**
+- Deep cloning complex objects with circular references can be tricky and error-prone
+- Every class that can be cloned needs to implement the clone method
+- Cloned objects may share hidden references if deep copy isn't handled correctly
+
 ## Example Code
 
 ### C#

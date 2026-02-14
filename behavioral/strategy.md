@@ -89,6 +89,18 @@ sequenceDiagram
 - You need different variants of an algorithm.
 - A class defines many behaviors via conditional statements that can be moved into strategy classes.
 
+## Trade-offs
+
+**Pros:**
+- Algorithms can be swapped at runtime without changing the context
+- Each strategy is isolated in its own class, easy to test independently
+- Avoids conditional statements for selecting behavior
+
+**Cons:**
+- Clients must be aware of different strategies to select the right one
+- Increases the number of classes — one per algorithm
+- Communication overhead if the strategy interface passes data the algorithm doesn't need
+
 ## Example Code
 
 ### C\#

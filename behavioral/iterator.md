@@ -98,6 +98,18 @@ sequenceDiagram
 - You want to support multiple simultaneous traversals of the same aggregate.
 - You want a uniform interface for traversing different aggregate structures.
 
+## Trade-offs
+
+**Pros:**
+- Provides a uniform way to traverse different collection types
+- Hides the internal structure of the collection from client code
+- Multiple iterators can traverse the same collection simultaneously
+
+**Cons:**
+- Less efficient than direct access for simple arrays or lists
+- Adding a custom iterator to a new collection requires implementing the full interface
+- External iterators can become invalid if the collection is modified during traversal
+
 ## Example Code
 
 ### C\#

@@ -100,6 +100,18 @@ sequenceDiagram
 - Both the abstraction and its implementation should be extensible through subclassing.
 - Changes in the implementation should have no impact on clients.
 
+## Trade-offs
+
+**Pros:**
+- Abstraction and implementation can evolve independently
+- Avoids a combinatorial explosion of classes when two dimensions vary
+- New abstractions and implementations can be added without changing existing code
+
+**Cons:**
+- Adds complexity with extra layers of indirection
+- Can be over-engineering when there's only one implementation
+- Requires careful upfront design to identify the right abstraction boundaries
+
 ## Example Code
 
 ### C#

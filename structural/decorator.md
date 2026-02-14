@@ -90,6 +90,18 @@ sequenceDiagram
 - You want to avoid a class explosion from subclassing every combination of features.
 - Extension by subclassing is impractical.
 
+## Trade-offs
+
+**Pros:**
+- More flexible than static inheritance — behaviors can be added and removed at runtime
+- Avoids a class explosion from every possible combination of features
+- Each decorator has a single responsibility, keeping classes small and focused
+
+**Cons:**
+- Many small decorator classes can make the codebase harder to navigate
+- Deeply nested decorators are hard to debug — the call stack gets long
+- Order of wrapping matters and can introduce subtle bugs
+
 ## Example Code
 
 ### C#

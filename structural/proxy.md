@@ -83,6 +83,18 @@ sequenceDiagram
 - You need to control access to an object (access control, logging, caching).
 - You want a local representative for a remote object.
 
+## Trade-offs
+
+**Pros:**
+- Controls access to the real object transparently — clients don't know they're using a proxy
+- Enables lazy loading, caching, logging, and access control without modifying the real object
+- Can improve performance by deferring expensive operations until actually needed
+
+**Cons:**
+- Adds an extra layer of indirection that can hide performance costs
+- Response time may increase due to the proxy overhead
+- Can make debugging harder — it's not always obvious when you're hitting the proxy vs. the real object
+
 ## Example Code
 
 ### C#

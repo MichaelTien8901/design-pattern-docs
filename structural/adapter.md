@@ -75,6 +75,18 @@ sequenceDiagram
 - You want to create a reusable class that cooperates with unrelated or unforeseen classes.
 - You need to use several existing subclasses but it is impractical to adapt their interface by subclassing each one.
 
+## Trade-offs
+
+**Pros:**
+- Lets incompatible interfaces work together without modifying existing code
+- Enables reuse of legacy or third-party classes in new systems
+- Follows the Single Responsibility Principle — adaptation logic is isolated
+
+**Cons:**
+- Adds an extra layer of indirection, increasing overall complexity
+- Can become a maintenance burden if the adapted interface changes frequently
+- Multiple adapters for the same class can lead to confusion about which to use
+
 ## Example Code
 
 ### C#

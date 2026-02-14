@@ -87,6 +87,18 @@ sequenceDiagram
 - There are many dependencies between clients and the implementation classes of an abstraction.
 - You want to layer your subsystems.
 
+## Trade-offs
+
+**Pros:**
+- Simplifies a complex subsystem behind a clean, easy-to-use interface
+- Reduces dependencies between client code and subsystem classes
+- Makes the subsystem easier to use for new team members
+
+**Cons:**
+- The facade can become a "god object" if it grows to cover too many subsystem features
+- Hides subsystem details that power users may need to access directly
+- Can become a bottleneck if all requests must go through it
+
 ## Example Code
 
 ### C#

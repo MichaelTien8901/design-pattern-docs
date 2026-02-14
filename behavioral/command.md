@@ -103,6 +103,18 @@ sequenceDiagram
 - You need to queue, schedule, or log operations.
 - You need reversible operations (undo/redo).
 
+## Trade-offs
+
+**Pros:**
+- Decouples the object that invokes an operation from the one that knows how to perform it
+- Commands can be queued, logged, serialized, and undone
+- Easy to add new commands without changing existing code
+
+**Cons:**
+- Can lead to a large number of small command classes — one for each action
+- Simple operations may not justify the overhead of wrapping them in command objects
+- Undo/redo logic can become complex for commands with side effects
+
 ## Example Code
 
 ### C\#

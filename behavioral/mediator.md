@@ -85,6 +85,18 @@ sequenceDiagram
 - Reusing an object is difficult because it refers to and communicates with many other objects.
 - You want to customize behavior distributed between several classes without creating many subclasses.
 
+## Trade-offs
+
+**Pros:**
+- Reduces direct dependencies between components — they only know the mediator
+- Centralizes communication logic in one place, making it easier to understand
+- Components can be reused independently since they don't reference each other
+
+**Cons:**
+- The mediator itself can become a "god object" as it grows to coordinate more components
+- Centralizing logic can create a single point of failure
+- Can be over-engineering for simple interactions between a few objects
+
 ## Example Code
 
 ### C\#

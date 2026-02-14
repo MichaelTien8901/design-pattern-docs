@@ -86,6 +86,18 @@ sequenceDiagram
 - You need to save and restore an object's state (e.g., undo/redo, checkpoints).
 - Direct access to the object's internal state would violate encapsulation.
 
+## Trade-offs
+
+**Pros:**
+- Captures and restores state without violating encapsulation
+- Simplifies the originator — it doesn't need to manage its own history
+- Multiple snapshots allow multi-level undo
+
+**Cons:**
+- Can consume significant memory if snapshots are large or frequent
+- The caretaker must manage snapshot lifecycle (when to save, how many to keep)
+- Saving and restoring state can be slow for complex objects
+
 ## Example Code
 
 ### C\#

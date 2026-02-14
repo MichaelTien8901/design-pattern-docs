@@ -75,6 +75,18 @@ sequenceDiagram
 - Object identity is not important to the application.
 - Most object state can be made extrinsic.
 
+## Trade-offs
+
+**Pros:**
+- Dramatically reduces memory usage when many similar objects exist
+- Shared state is managed centrally, reducing duplication
+- Works well for immutable shared data (fonts, icons, textures)
+
+**Cons:**
+- Adds complexity by splitting object state into intrinsic (shared) and extrinsic (unique) parts
+- May trade memory savings for CPU overhead when computing extrinsic state
+- Makes code harder to understand — objects no longer contain all their own data
+
 ## Example Code
 
 ### C#
