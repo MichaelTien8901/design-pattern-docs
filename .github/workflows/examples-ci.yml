@@ -1,0 +1,49 @@
+name: Build & Test Examples
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "examples/**"
+      - ".github/workflows/examples-ci.yml"
+  pull_request:
+    paths:
+      - "examples/**"
+      - ".github/workflows/examples-ci.yml"
+  workflow_dispatch:
+
+jobs:
+  csharp:
+    name: C# (.NET 8.0)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.0.x"
+      - name: Build and run
+        working-directory: examples/csharp
+        run: dotnet run
+
+  cpp:
+    name: C++ (CMake)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build and run
+        working-directory: examples/cpp
+        run: |
+          cmake -B build -DCMAKE_BUILD_TYPE=Release
+          cmake --build build -j$(nproc)
+          bash run_all.sh
+
+  delphi:
+    name: Delphi (Free Pascal)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Free Pascal
+        run: sudo apt-get update && sudo apt-get install -y fpc
+      - name: Build and run
+        working-directory: examples/delphi
+        run: bash build_all.sh
