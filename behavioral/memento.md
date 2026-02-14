@@ -15,6 +15,17 @@ Without violating encapsulation, capture and externalize an object's internal st
 
 A text editor needs to support undo. The editor's internal state (content, cursor position) must be saved at various points so that previous states can be restored. Exposing internal fields to achieve this would break encapsulation.
 
+## Real-World Analogy
+
+{: .note }
+> Think of saving your progress in a video game. Before you fight the boss, you save the game. If you lose, you reload from that save point — your health, inventory, and position are exactly as they were. The save file is the memento: a snapshot of your state at a specific moment, stored externally so you can go back to it anytime.
+
+## When You Need It
+
+- You're building a document editor with an undo history — each edit saves a snapshot so users can step back through previous versions
+- You're creating a wizard or multi-step form where users can go back to previous steps without losing their input
+- You're implementing a transaction system where you need to roll back to a previous state if something fails midway
+
 ## UML Class Diagram
 
 ```mermaid

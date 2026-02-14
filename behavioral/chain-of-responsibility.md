@@ -15,6 +15,17 @@ Avoid coupling the sender of a request to its receiver by giving more than one o
 
 A support system receives tickets of varying severity. Simple issues should be resolved by Level 1 support, more complex issues by Level 2, and critical escalations by a Manager. Hard-wiring the routing logic into the client creates tight coupling and makes it difficult to add or reorder handlers.
 
+## Real-World Analogy
+
+{: .note }
+> Think of calling customer support. First you get a chatbot. If it can't help, you're transferred to a frontline agent. If they can't help, you go to a specialist. If still unresolved, you reach a manager. Each level either handles your request or passes it up the chain. You don't choose who handles it — the chain figures it out.
+
+## When You Need It
+
+- You're building a request validation pipeline where input must pass through authentication, authorization, rate limiting, and data validation — each step either handles the request or passes it along
+- You're creating a help desk system where tickets are routed through tiers of support based on severity and expertise
+- You're implementing middleware in a web framework where each middleware can process the request, modify it, or pass it to the next one
+
 ## UML Class Diagram
 
 ```mermaid

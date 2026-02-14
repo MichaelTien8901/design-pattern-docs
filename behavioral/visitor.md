@@ -15,6 +15,17 @@ Represent an operation to be performed on the elements of an object structure. V
 
 A graphics application has shapes (Circle, Rectangle) that need to be exported to multiple formats (XML, JSON). Adding an export method to each shape for every format scatters unrelated logic across shape classes and requires modifying them whenever a new format is introduced.
 
+## Real-World Analogy
+
+{: .note }
+> Think of a home inspector visiting houses. The inspector doesn't change the house — they just examine it and produce a report. Different inspectors (electrical, plumbing, structural) visit the same house but look at different things. If you need a new type of inspection, you hire a new inspector — you don't renovate the house. The visitor adds new operations to existing structures without modifying them.
+
+## When You Need It
+
+- You're building an AST (abstract syntax tree) for a programming language and need to add operations like type-checking, optimization, and code generation — each is a visitor that walks the tree without modifying node classes
+- You're creating an export system where the same document structure can be exported to XML, JSON, or PDF — each format is a visitor
+- You're building a reporting tool that traverses a complex object structure (orders, items, discounts) to calculate totals, generate invoices, or produce analytics — each report type is a separate visitor
+
 ## UML Class Diagram
 
 ```mermaid

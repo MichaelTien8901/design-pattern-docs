@@ -15,6 +15,17 @@ Ensure a class has only one instance, and provide a global point of access to it
 
 Some classes should have exactly one instance — a database connection pool, a logger, or a configuration manager. You need to guarantee that no additional instances can be created and provide easy access to that single instance.
 
+## Real-World Analogy
+
+{: .note }
+> Think of a country's government — there's only one president at a time. No matter who asks "who's the president?", everyone gets the same answer. You can't just create a second president on your own. The position is globally accessible and guaranteed to be unique. That's a Singleton — one instance, one global access point.
+
+## When You Need It
+
+- You need a single shared database connection pool that every part of your application uses, and creating multiple pools would waste resources or cause conflicts
+- You're building a logging service that writes to one file — multiple logger instances would corrupt the file with interleaved writes
+- You need a configuration manager that loads settings once at startup and provides them everywhere, and reloading or duplicating it would cause inconsistencies
+
 ## UML Class Diagram
 
 ```mermaid

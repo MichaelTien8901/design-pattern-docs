@@ -15,6 +15,17 @@ Compose objects into tree structures to represent part-whole hierarchies. Compos
 
 A file system contains both files and directories. Directories can contain files and other directories. You need a uniform way to calculate the total size of any node, whether it is a single file or an entire directory tree.
 
+## Real-World Analogy
+
+{: .note }
+> Think of a company's org chart. A department contains teams, teams contain people, and some departments contain sub-departments. When the CEO says "calculate headcount," each level adds up its contents — a person reports 1, a team sums its people, a department sums its teams. You treat a single employee and an entire department the same way: just ask for the count.
+
+## When You Need It
+
+- You're building a file manager where folders contain files and other folders — and you want operations like "get size" or "delete" to work the same way on a single file or an entire folder tree
+- You're creating a UI framework where panels contain buttons, labels, and other panels — and rendering should recursively draw everything inside
+- You're building a menu system where menu items can be simple actions or sub-menus containing more items, and you want to display them all uniformly
+
 ## UML Class Diagram
 
 ```mermaid

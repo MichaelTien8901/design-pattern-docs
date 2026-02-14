@@ -15,6 +15,17 @@ Provide an interface for creating families of related or dependent objects witho
 
 You need to create sets of related objects (e.g., UI widgets for different platforms) that must be used together. Creating them individually leads to inconsistent combinations and tight coupling to concrete classes.
 
+## Real-World Analogy
+
+{: .note }
+> Imagine a furniture store that sells matching sets — a "Modern" collection and a "Victorian" collection. When you pick "Modern," you get a modern chair, modern sofa, and modern table that all look great together. You never mix a Victorian chair with a modern table. The store catalog is the abstract factory — it guarantees you get a matching family of furniture, no matter which style you choose.
+
+## When You Need It
+
+- You're building a cross-platform app that needs Windows-style buttons and dialogs on Windows, and macOS-style ones on Mac — and they must never mix
+- You're creating a theming system where "dark mode" and "light mode" each produce a consistent set of colors, icons, and fonts
+- You're building a database layer that must work with PostgreSQL or MySQL, and each needs its own matching set of connection, command, and reader objects
+
 ## UML Class Diagram
 
 ```mermaid

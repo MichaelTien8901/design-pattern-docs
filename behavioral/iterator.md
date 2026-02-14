@@ -15,6 +15,17 @@ Provide a way to access the elements of an aggregate object sequentially without
 
 A library system manages a collection of books stored internally as an array. Client code should be able to traverse the collection without depending on the array implementation, and multiple traversal strategies may be needed in the future.
 
+## Real-World Analogy
+
+{: .note }
+> Think of a playlist on your music app. You press "next" to hear the next song without knowing how songs are stored — it could be an array, a linked list, or streamed from the cloud. The playlist gives you a simple way to go through songs one by one. You can also have different iterators: shuffle mode, repeat mode, or sorted by artist — all over the same collection.
+
+## When You Need It
+
+- You're building a social media feed that loads posts lazily — the iterator fetches the next batch from the server as the user scrolls, hiding the pagination logic
+- You have a complex data structure (tree, graph, or composite) and need to walk through its elements without exposing the internal structure
+- You want to provide multiple ways to traverse a collection — alphabetical, by date, by priority — without changing the collection itself
+
 ## UML Class Diagram
 
 ```mermaid

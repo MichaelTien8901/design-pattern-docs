@@ -15,6 +15,17 @@ Provide a surrogate or placeholder for another object to control access to it.
 
 Loading high-resolution images from disk is expensive. You want to display a placeholder and only load the real image data when it is actually needed for rendering. You need an object that stands in for the real image and defers loading until the first access.
 
+## Real-World Analogy
+
+{: .note }
+> Think of a credit card. It's a proxy for your bank account. It has the same interface as cash (you pay with it), but behind the scenes it adds security checks, spending limits, and transaction logging. The store doesn't interact with your bank directly — the credit card handles it. A proxy stands in for something else and controls access to it.
+
+## When You Need It
+
+- You're loading high-resolution images in a gallery — a proxy shows a thumbnail first and only loads the full image when the user clicks on it (lazy loading)
+- You need to add access control to a service — the proxy checks if the user has permission before forwarding the request to the real service
+- You're calling a remote API and want to add caching — the proxy returns cached results for repeated requests without hitting the server again
+
 ## UML Class Diagram
 
 ```mermaid

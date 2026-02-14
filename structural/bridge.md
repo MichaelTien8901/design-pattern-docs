@@ -15,6 +15,17 @@ Decouple an abstraction from its implementation so that the two can vary indepen
 
 You are building a universal remote control system that must work with different device types (TV, radio). If you subclass every combination of remote and device, the class hierarchy explodes. You need a way to vary remotes and devices independently.
 
+## Real-World Analogy
+
+{: .note }
+> Think of a TV remote control and the TV itself. The remote (abstraction) works the same way regardless of the TV brand — you press volume up, channel down, power. You can swap the TV (Samsung, LG, Sony) without changing the remote, and you can upgrade to a fancy universal remote without replacing your TV. The remote and TV vary independently — that's the bridge.
+
+## When You Need It
+
+- You're building a messaging system that needs to send via email, SMS, or Slack — and you also have different message types (alert, report, newsletter) — Bridge keeps these two dimensions from exploding into dozens of classes
+- You're creating a drawing app that supports multiple rendering engines (OpenGL, DirectX, SVG) for the same shapes — you want to add new shapes without writing renderer-specific code for each one
+- You need to support multiple database drivers (PostgreSQL, MySQL, SQLite) with different query builders (simple, advanced) without creating every combination as a separate class
+
 ## UML Class Diagram
 
 ```mermaid

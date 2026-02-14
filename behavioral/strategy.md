@@ -15,6 +15,17 @@ Define a family of algorithms, encapsulate each one, and make them interchangeab
 
 An e-commerce system supports multiple payment methods: credit card, PayPal, and Bitcoin. Embedding payment logic directly into the checkout class forces changes to that class whenever a new payment method is added and violates the open/closed principle.
 
+## Real-World Analogy
+
+{: .note }
+> Think of getting to the airport. You can drive, take a taxi, ride the bus, or call an Uber. The goal is the same (get to the airport), but you pick the strategy based on your budget, time, and luggage. You can switch strategies at the last minute — your trip planning doesn't change, only the transportation method does.
+
+## When You Need It
+
+- You're building a payment system that supports credit cards, PayPal, and cryptocurrency — and you want to swap payment methods at runtime without changing the checkout logic
+- You're implementing a sorting feature where users can sort by name, date, price, or popularity — each sort is a pluggable strategy
+- You're building a compression tool that supports ZIP, GZIP, and LZ4 — the compression algorithm is interchangeable, and you might add new ones later
+
 ## UML Class Diagram
 
 ```mermaid

@@ -15,6 +15,17 @@ Convert the interface of a class into another interface that clients expect. Ada
 
 You have a legacy XML data reader, but your application expects all data sources to provide JSON output. You cannot modify the legacy class, and you need a way to make it conform to the expected JSON interface without changing existing code on either side.
 
+## Real-World Analogy
+
+{: .note }
+> When you travel abroad, your laptop charger doesn't fit the wall outlet. You buy a power adapter — it doesn't change what your charger does or how the outlet works, it just makes them compatible. The adapter sits between two things that can't talk to each other and translates so they work together.
+
+## When You Need It
+
+- You're integrating a third-party payment library whose API returns XML, but your app expects JSON — you need a wrapper to translate between them
+- You're replacing an old analytics service with a new one, but hundreds of files call the old API — an adapter lets the old calls work with the new service without rewriting everything
+- You're connecting to a legacy database that uses stored procedures, but your ORM expects standard CRUD operations
+
 ## UML Class Diagram
 
 ```mermaid

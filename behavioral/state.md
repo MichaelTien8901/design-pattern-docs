@@ -15,6 +15,17 @@ Allow an object to alter its behavior when its internal state changes. The objec
 
 A document in a workflow system can be in Draft, Review, or Published state. Each state dictates which operations are allowed (edit, submit for review, publish). Using conditionals to check the current state throughout the code leads to complex, hard-to-maintain logic.
 
+## Real-World Analogy
+
+{: .note }
+> Think of a vending machine. When it's "waiting for money," pressing the item button does nothing. Once you insert enough coins, pressing the button dispenses the item. After dispensing, it goes back to waiting. The same button press does different things depending on the machine's current state. The machine's behavior changes as its state changes — without rewiring the buttons.
+
+## When You Need It
+
+- You're building a document workflow where a document goes through Draft, Review, Approved, and Published states — and the available actions (edit, submit, approve, reject) depend on which state it's in
+- You're implementing a TCP connection that behaves differently when it's listening, connected, or closing — and you want to avoid giant if/else chains
+- You're creating a media player where play, pause, and stop buttons behave differently depending on whether a track is playing, paused, or stopped
+
 ## UML Class Diagram
 
 ```mermaid

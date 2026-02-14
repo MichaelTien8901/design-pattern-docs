@@ -15,6 +15,17 @@ Define an object that encapsulates how a set of objects interact. Mediator promo
 
 In a chat application, users need to send messages to each other. If each user holds direct references to every other user, adding or removing participants becomes complex and the system becomes tightly coupled. A central chat room can mediate all communication.
 
+## Real-World Analogy
+
+{: .note }
+> Think of an air traffic control tower at an airport. Planes don't communicate directly with each other — that would be chaos with dozens of planes negotiating who lands first. Instead, every plane talks to the tower, and the tower coordinates everything. The tower is the mediator — it prevents direct dependencies between planes and keeps everyone safe.
+
+## When You Need It
+
+- You're building a chat room where users send messages through a central server rather than maintaining direct connections to every other user
+- You're creating a complex dialog with many UI controls (dropdowns, checkboxes, text fields) that need to react to each other's changes — the mediator coordinates their interactions instead of each control knowing about all others
+- You're building a microservice orchestrator that coordinates workflows between services without them calling each other directly
+
 ## UML Class Diagram
 
 ```mermaid

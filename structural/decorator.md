@@ -15,6 +15,17 @@ Attach additional responsibilities to an object dynamically. Decorators provide 
 
 You have a plain text component and want to optionally apply bold or italic formatting. Using subclasses for every combination (bold, italic, bold-italic) leads to a class explosion. You need a way to compose formatting behaviors at runtime.
 
+## Real-World Analogy
+
+{: .note }
+> Think of ordering coffee. You start with a plain espresso, then add milk (latte), then add vanilla syrup, then add whipped cream. Each addition wraps the previous drink and adds something to it — but it's still "a coffee" at every step. You can stack toppings in any order, and the price is the sum of all layers. Each topping is a decorator.
+
+## When You Need It
+
+- You're building a stream processing pipeline where data can be compressed, encrypted, and buffered — and users should be able to combine these in any order at runtime
+- You're adding logging, caching, or retry logic to API calls without modifying the original service class — just wrap it with decorators
+- You're creating a text rendering system where text can be bold, italic, underlined, or any combination — and you don't want a class for every possible combination
+
 ## UML Class Diagram
 
 ```mermaid

@@ -15,6 +15,17 @@ Define an interface for creating an object, but let subclasses decide which clas
 
 A framework needs to standardize the architectural model for a range of applications, but allow for individual applications to define their own domain objects and provide for their instantiation. You want to create objects without specifying the exact class, or you need to delegate the creation logic to subclasses.
 
+## Real-World Analogy
+
+{: .note }
+> Think of a logistics company that ships packages. The headquarters decides *that* packages need to be delivered, but each regional office decides *how* — one uses trucks, another uses ships, another uses drones. The headquarters doesn't care about the vehicle; it just says "deliver this." Each regional office is a "factory" that creates the right transport for its region.
+
+## When You Need It
+
+- You're building a notification system and need to send alerts via email, SMS, or push — but the sending logic should be decided by each notification channel, not hardcoded in one place
+- You're writing a game where levels create different enemies, but you want to add new enemy types without changing the level code
+- You're building a document editor that needs to create different file formats (PDF, Word, HTML) through the same "export" interface
+
 ## UML Class Diagram
 
 ```mermaid

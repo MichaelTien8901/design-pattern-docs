@@ -15,6 +15,17 @@ Use sharing to support large numbers of fine-grained objects efficiently.
 
 A text editor must render thousands of characters on screen. Each character has font and style data that is often identical across many characters. Storing a separate copy of this shared data for every character wastes memory. You need a way to share common state among many objects.
 
+## Real-World Analogy
+
+{: .note }
+> Think of a font in a word processor. The letter "e" might appear thousands of times in a document, but the software doesn't store thousands of separate "e" objects. It stores one shared definition of "e" (the glyph) and just records where each one goes on the page. The glyph is the flyweight — shared data — and the position is the unique part stored separately.
+
+## When You Need It
+
+- You're rendering a forest with 100,000 trees in a game — each tree shares the same mesh and texture (flyweight), but has its own position, size, and rotation
+- You're building a text editor that displays millions of characters — the font style objects (Arial 12pt bold) are shared across all characters that use them
+- You're creating a map application with thousands of pins that share the same icon image but have different coordinates and labels
+
 ## UML Class Diagram
 
 ```mermaid

@@ -15,6 +15,17 @@ Define the skeleton of an algorithm in an operation, deferring some steps to sub
 
 A data mining application needs to parse files in CSV, JSON, and XML formats. The overall pipeline is the same (open file, extract data, parse data, analyze data, close file), but the extraction and parsing steps differ per format. Duplicating the pipeline in each parser leads to code duplication and inconsistency.
 
+## Real-World Analogy
+
+{: .note }
+> Think of building a house. Every house follows the same general steps: lay foundation, build walls, add roof, install plumbing, and paint. But a wooden house and a brick house do each step differently. The construction plan (template) is fixed — the order never changes — but the specific materials and techniques vary. The template defines the skeleton; subclasses fill in the details.
+
+## When You Need It
+
+- You're building a data import pipeline where every source (CSV, JSON, XML) follows the same steps — open file, parse records, validate, save to database — but each format parses differently
+- You're creating an onboarding flow for different user types (free, premium, enterprise) that follows the same sequence but customizes certain steps
+- You're building a test framework where each test runs setup, execute, assert, and teardown — the framework controls the flow, but each test defines its own logic
+
 ## UML Class Diagram
 
 ```mermaid

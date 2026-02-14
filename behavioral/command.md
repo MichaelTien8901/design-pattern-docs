@@ -15,6 +15,17 @@ Encapsulate a request as an object, thereby letting you parameterize clients wit
 
 A text editor needs to support copy and paste operations with undo capability. Hard-coding these operations into UI buttons creates tight coupling between the UI and business logic, and makes undo/redo difficult to implement uniformly.
 
+## Real-World Analogy
+
+{: .note }
+> Think of ordering at a restaurant. You don't walk into the kitchen and cook your food — you tell the waiter what you want. The waiter writes your order on a slip (the command object), takes it to the kitchen, and the chef executes it. The order can be queued, modified, or cancelled. The waiter doesn't need to know how to cook; the slip contains everything the kitchen needs.
+
+## When You Need It
+
+- You're building a text editor with undo/redo — each action (type, delete, format) is a command object that knows how to execute and reverse itself
+- You're creating a task queue where jobs are submitted, stored, and executed later — possibly on a different server
+- You're implementing a macro system where users record a sequence of actions and replay them with one click
+
 ## UML Class Diagram
 
 ```mermaid

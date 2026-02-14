@@ -15,6 +15,17 @@ Separate the construction of a complex object from its representation so that th
 
 You need to create complex objects step by step. The construction process must allow different representations of the object being constructed, without forcing the client to know the details of each step.
 
+## Real-World Analogy
+
+{: .note }
+> Think of ordering a custom burger at a restaurant. You don't get the whole burger at once — you choose the bun, then the patty, then toppings, then sauce, step by step. The cook (director) knows the sequence, and you can end up with completely different burgers using the same process. A vegetarian builder and a meat-lover builder follow the same steps but produce different results.
+
+## When You Need It
+
+- You're constructing complex configuration objects with many optional fields — like an HTTP request with headers, body, query params, and timeout that shouldn't all be crammed into one constructor
+- You're generating reports or documents step-by-step (header, body, charts, footer) and want to reuse the same assembly process for PDF, HTML, and plain text output
+- You're building test data with many variations — "create a user with admin role, verified email, and two orders" vs. "create a basic guest user"
+
 ## UML Class Diagram
 
 ```mermaid

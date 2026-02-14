@@ -15,6 +15,17 @@ Specify the kinds of objects to create using a prototypical instance, and create
 
 You need to create objects that are similar to existing ones, but creating them from scratch is expensive or complex. You want to avoid a proliferation of subclasses just to configure different initial states.
 
+## Real-World Analogy
+
+{: .note }
+> Think of a photocopier. Instead of filling out a complex form from scratch every time, you fill it out once and then photocopy it whenever you need another one. You can then make small edits on each copy — change the name, update the date — without starting over. The original form is the prototype, and each photocopy is a clone you can customize.
+
+## When You Need It
+
+- You're building a graphic editor where users duplicate shapes (circles, rectangles) and tweak their properties, rather than creating each shape from scratch through a complex setup dialog
+- You're creating game levels with many similar objects (trees, enemies, buildings) that differ slightly — cloning a template is faster than constructing each one individually
+- You're working with objects that are expensive to create (e.g., they require database lookups or network calls during initialization) and you need multiple similar instances
+
 ## UML Class Diagram
 
 ```mermaid

@@ -15,6 +15,17 @@ Provide a unified interface to a set of interfaces in a subsystem. Facade define
 
 A home theater system involves multiple components -- an amplifier, a DVD player, and a projector. Starting a movie requires turning on each device, configuring settings, and coordinating them in the right order. You need a simple one-method interface to orchestrate the entire process.
 
+## Real-World Analogy
+
+{: .note }
+> Think of starting your car. You just turn the key (or press a button). Behind the scenes, the engine ignites, fuel pumps activate, electronics initialize, the dashboard lights up. You don't manually do each step — the ignition is a facade that hides a complex startup sequence behind one simple action.
+
+## When You Need It
+
+- You're wrapping a complex third-party library (like a video encoding SDK with dozens of classes) behind a simple `convertVideo(input, output, format)` method for your team to use
+- You're building an e-commerce checkout that coordinates inventory, payment, shipping, and email confirmation — the controller just calls `checkout.process(order)` instead of orchestrating four services
+- You're creating a simple API for a complex subsystem so that new team members can use it without reading 50 pages of documentation
+
 ## UML Class Diagram
 
 ```mermaid
