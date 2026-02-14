@@ -1,0 +1,9 @@
+_site/
+.jekyll-cache/
+.jekyll-metadata
+examples/cpp/build/
+examples/delphi/*.o
+examples/delphi/*.ppu
+examples/csharp/bin/
+examples/csharp/obj/
+.DS_Store
