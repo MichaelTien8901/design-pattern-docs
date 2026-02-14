@@ -1,0 +1,24 @@
+services:
+  csharp:
+    build:
+      context: .
+      dockerfile: Dockerfile.csharp
+    volumes:
+      - ./csharp:/app
+    working_dir: /app
+
+  cpp:
+    build:
+      context: .
+      dockerfile: Dockerfile.cpp
+    volumes:
+      - ./cpp:/app
+    working_dir: /app
+
+  delphi:
+    build:
+      context: .
+      dockerfile: Dockerfile.delphi
+    volumes:
+      - ./delphi:/app
+    working_dir: /app
