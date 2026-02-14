@@ -71,6 +71,26 @@ classDiagram
     RetryPolicy --> Operation
 ```
 
+## Sequence Diagram
+
+```mermaid
+sequenceDiagram
+    participant C as Client
+    participant RP as RetryPolicy
+    participant S as Service
+
+    C->>RP: execute(operation)
+    RP->>S: attempt 1
+    S-->>RP: failure
+    Note over RP: wait (backoff delay)
+    RP->>S: attempt 2
+    S-->>RP: failure
+    Note over RP: wait (longer backoff)
+    RP->>S: attempt 3
+    S-->>RP: success
+    RP-->>C: result
+```
+
 ## Participants
 - **RetryPolicy** — orchestrates retry attempts and applies backoff strategy
 - **BackoffStrategy** — defines the interface for calculating retry delays

@@ -83,6 +83,24 @@ classDiagram
     Sidecar ..> SharedStorage
 ```
 
+## Sequence Diagram
+
+```mermaid
+sequenceDiagram
+    participant EC as ExternalClient
+    participant SC as Sidecar
+    participant MA as MainApp
+
+    EC->>SC: HTTP request
+    SC->>SC: handle TLS termination
+    SC->>SC: authenticate request
+    SC->>MA: forward to localhost
+    MA->>MA: process business logic
+    MA-->>SC: response
+    SC->>SC: log interaction
+    SC-->>EC: return response
+```
+
 ## Participants
 - **Host** — the deployment unit (pod, VM, or container group) that holds both components
 - **MainApplication** — the primary application providing core business functionality

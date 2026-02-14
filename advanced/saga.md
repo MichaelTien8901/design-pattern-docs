@@ -64,6 +64,25 @@ classDiagram
     CompensationLog --> SagaStep : rollback order
 ```
 
+## Sequence Diagram
+
+```mermaid
+sequenceDiagram
+    participant Orchestrator as SagaOrchestrator
+    participant ServiceA
+    participant ServiceB
+    participant ServiceC
+
+    Orchestrator->>ServiceA: Execute Step1
+    ServiceA-->>Orchestrator: Success
+    Orchestrator->>ServiceB: Execute Step2
+    ServiceB-->>Orchestrator: Success
+    Orchestrator->>ServiceC: Execute Step3
+    ServiceC-->>Orchestrator: Failure
+    Orchestrator->>ServiceB: Compensate Step2
+    Orchestrator->>ServiceA: Compensate Step1
+```
+
 ## Participants
 - **SagaOrchestrator** — coordinates the execution of saga steps and handles compensation
 - **SagaStep** — represents a local transaction with its compensating action

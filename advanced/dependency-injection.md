@@ -59,6 +59,24 @@ classDiagram
     DIContainer ..> Client : injects
 ```
 
+## Sequence Diagram
+
+```mermaid
+sequenceDiagram
+    participant Container as DIContainer
+    participant Client
+    participant IService
+    participant ConcreteService
+
+    Container->>Container: register(IService, ConcreteService)
+    Client->>Container: request IService
+    Container->>ConcreteService: new ConcreteService()
+    Container->>Client: inject ConcreteService into constructor
+    Client->>IService: call method()
+    IService->>ConcreteService: method() executed
+    ConcreteService-->>Client: return result
+```
+
 ## Participants
 - **Client** — consumes services through dependency injection rather than creating them
 - **IService** — interface defining the contract that dependencies must fulfill

@@ -60,6 +60,26 @@ classDiagram
     QueryHandler --> ReadModel
 ```
 
+## Sequence Diagram
+
+```mermaid
+sequenceDiagram
+    participant Client
+    participant CommandHandler
+    participant WriteStore
+    participant Projector
+    participant ReadStore
+    participant QueryHandler
+
+    Client->>CommandHandler: Send Command
+    CommandHandler->>WriteStore: Write data
+    CommandHandler->>Projector: Emit Event
+    Projector->>ReadStore: Update projection
+    Client->>QueryHandler: Send Query
+    QueryHandler->>ReadStore: Read data
+    QueryHandler-->>Client: Return result
+```
+
 ## Participants
 - **Command** — represents a write operation that changes system state
 - **CommandHandler** — processes commands using the write model and business logic

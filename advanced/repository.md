@@ -83,6 +83,26 @@ classDiagram
     note for CustomerRepository "Domain-specific queries\nTranslates to/from database"
 ```
 
+## Sequence Diagram
+
+```mermaid
+sequenceDiagram
+    participant Service
+    participant Repository
+    participant Database
+    participant Entity as Domain Entity
+
+    Service->>Repository: findById(id)
+    Repository->>Database: Query for data
+    Database-->>Repository: Return raw data
+    Repository->>Entity: Map to Domain Entity
+    Repository-->>Service: Return Entity
+    Service->>Entity: Modify Entity
+    Service->>Repository: save(Entity)
+    Repository->>Repository: Map Entity to DB row
+    Repository->>Database: Persist changes
+```
+
 ## Participants
 - **Repository Interface** — Defines collection-like operations for accessing domain objects
 - **Concrete Repository** — Implements the interface with specific data access technology

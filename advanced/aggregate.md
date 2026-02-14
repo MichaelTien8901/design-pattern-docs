@@ -73,6 +73,25 @@ classDiagram
     note for OrderItem "Internal Entity: Modified only\nthrough Order aggregate"
 ```
 
+## Sequence Diagram
+
+```mermaid
+sequenceDiagram
+    participant Client
+    participant Repository
+    participant Order as Order (AggregateRoot)
+    participant Items as OrderItems
+
+    Client->>Repository: Load Order by ID
+    Repository->>Order: Reconstruct Order
+    Repository->>Items: Reconstruct OrderItems
+    Repository-->>Client: Return Order with OrderItems
+    Client->>Order: addItem(product, quantity)
+    Order->>Order: Validate invariants
+    Client->>Repository: save(Order)
+    Repository->>Repository: Persist Order and OrderItems
+```
+
 ## Participants
 - **Aggregate Root** — The single entity that acts as entry point to the aggregate and enforces invariants
 - **Entities** — Internal objects with identity that are part of the aggregate

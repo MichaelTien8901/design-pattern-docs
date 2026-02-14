@@ -67,6 +67,25 @@ classDiagram
     ContextMap ..> ShippingContext.Customer
 ```
 
+## Sequence Diagram
+
+```mermaid
+sequenceDiagram
+    participant BC as BillingContext
+    participant ACL as Anti-Corruption Layer
+    participant SC as ShippingContext
+
+    BC->>BC: Receive billing request
+    BC->>BC: Use BillingContext.Customer model
+    BC->>ACL: Request shipping info
+    ACL->>ACL: Translate BillingContext.Customer to ShippingContext.Customer
+    ACL->>SC: Call ShippingContext API
+    SC->>SC: Use ShippingContext.Customer model
+    SC-->>ACL: Return shipping data
+    ACL->>ACL: Translate ShippingContext data to BillingContext model
+    ACL-->>BC: Return translated data
+```
+
 ## Participants
 - **Bounded Context** — A boundary within which a domain model is defined and applicable
 - **Ubiquitous Language** — The shared vocabulary used consistently within a context

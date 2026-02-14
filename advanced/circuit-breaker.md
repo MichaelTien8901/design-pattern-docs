@@ -60,6 +60,32 @@ classDiagram
     CircuitBreaker --> Service
 ```
 
+## Sequence Diagram
+
+```mermaid
+sequenceDiagram
+    participant C as Client
+    participant CB as CircuitBreaker
+    participant S as Service
+
+    C->>CB: call()
+    CB->>CB: check state (Closed)
+    CB->>S: execute()
+    S-->>CB: failure
+    CB->>CB: increment failure count
+    Note over CB: Threshold reached
+    CB->>CB: state = Open
+    C->>CB: call()
+    CB-->>C: fast fail (circuit open)
+    Note over CB: Timeout expires
+    CB->>CB: state = Half-Open
+    C->>CB: call()
+    CB->>S: test request
+    S-->>CB: success
+    CB->>CB: state = Closed
+    CB-->>C: success
+```
+
 ## Participants
 - **Client** — makes requests through the circuit breaker
 - **CircuitBreaker** — monitors calls to the service and manages state transitions

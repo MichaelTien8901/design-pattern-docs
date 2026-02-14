@@ -63,6 +63,24 @@ classDiagram
     Snapshot --> EventStore : stored in
 ```
 
+## Sequence Diagram
+
+```mermaid
+sequenceDiagram
+    participant Client
+    participant Aggregate
+    participant EventStore
+
+    Client->>Aggregate: Send command
+    Aggregate->>Aggregate: Validate
+    Aggregate->>Aggregate: Create Event
+    Aggregate->>EventStore: Append Event
+    Note over EventStore: Event persisted
+
+    EventStore->>Aggregate: Replay Events
+    Aggregate->>Aggregate: Rebuild state
+```
+
 ## Participants
 - **Event** — immutable record of a state change with timestamp and data
 - **EventStore** — append-only storage for events, organized by aggregate

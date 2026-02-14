@@ -69,6 +69,32 @@ classDiagram
     ResourcePool <|-- AnalyticsPool
 ```
 
+## Sequence Diagram
+
+```mermaid
+sequenceDiagram
+    participant C as Client
+    participant BM as BulkheadManager
+    participant PoolA as ServiceA Pool
+    participant PoolB as ServiceB Pool
+
+    C->>BM: executeInPool("ServiceA", op1)
+    BM->>PoolA: execute(op1)
+    PoolA-->>BM: success
+    BM-->>C: result
+
+    C->>BM: executeInPool("ServiceB", op2)
+    BM->>PoolB: execute(op2)
+    PoolB-->>BM: pool full / failure
+    BM-->>C: rejected
+
+    C->>BM: executeInPool("ServiceA", op3)
+    BM->>PoolA: execute(op3)
+    Note over PoolA: ServiceA continues normally
+    PoolA-->>BM: success
+    BM-->>C: result
+```
+
 ## Participants
 - **BulkheadManager** — manages multiple isolated resource pools
 - **ResourcePool** — represents an isolated pool of resources with fixed capacity

@@ -61,6 +61,26 @@ classDiagram
     Client ..> PooledObject : uses
 ```
 
+## Sequence Diagram
+
+```mermaid
+sequenceDiagram
+    participant Client1
+    participant Pool
+    participant Object1
+    participant Client2
+    participant Object2
+    participant Client3
+
+    Client1->>Pool: Request object
+    Pool->>Client1: Return Object1
+    Client2->>Pool: Request object
+    Pool->>Client2: Return Object2
+    Client1->>Pool: Release Object1
+    Client3->>Pool: Request object
+    Pool->>Client3: Return Object1 (reused)
+```
+
 ## Participants
 - **ObjectPool** — manages the lifecycle of pooled objects, tracking available and in-use instances
 - **PooledObject** — interface defining reset() and validation methods for objects in the pool

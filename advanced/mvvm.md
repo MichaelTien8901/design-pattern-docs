@@ -57,6 +57,25 @@ classDiagram
     DataBinding ..> ViewModel : observes
 ```
 
+## Sequence Diagram
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant View
+    participant ViewModel
+    participant Model
+
+    User->>View: interacts with UI
+    View->>ViewModel: update property (data binding)
+    ViewModel->>ViewModel: validate input
+    ViewModel->>Model: update data
+    Model-->>ViewModel: confirm update
+    ViewModel->>ViewModel: raise PropertyChanged event
+    ViewModel-->>View: notify change (data binding)
+    View->>View: automatically refresh display
+```
+
 ## Participants
 - **View** — renders UI elements and binds to ViewModel properties and commands via data binding
 - **ViewModel** — exposes observable properties and commands, transforming Model data for display

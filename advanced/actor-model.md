@@ -59,6 +59,26 @@ classDiagram
     Actor ..> Message : sends/receives
 ```
 
+## Sequence Diagram
+
+```mermaid
+sequenceDiagram
+    participant Sender
+    participant ActorA
+    participant MailboxA
+    participant ActorB
+    participant MailboxB
+
+    Sender->>MailboxA: Put message
+    ActorA->>MailboxA: Dequeue message
+    ActorA->>ActorA: Process message
+    ActorA->>MailboxB: Send message to ActorB
+    ActorB->>MailboxB: Dequeue message
+    ActorB->>ActorB: Process message
+    ActorB->>MailboxA: Send reply
+    ActorA->>MailboxA: Dequeue reply
+```
+
 ## Participants
 - **ActorSystem** — manages actor lifecycle, message dispatching, and provides supervision
 - **Actor** — encapsulates state and behavior, processes messages sequentially from its mailbox

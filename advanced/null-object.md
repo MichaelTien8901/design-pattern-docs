@@ -51,6 +51,28 @@ classDiagram
     Client --> AbstractObject
 ```
 
+## Sequence Diagram
+
+```mermaid
+sequenceDiagram
+    participant Client
+    participant Factory
+    participant RealObject
+    participant NullObject
+
+    Client->>Factory: request object
+    Factory->>RealObject: create
+    Factory-->>Client: return RealObject
+    Client->>RealObject: operation()
+    RealObject-->>Client: real behavior executed
+
+    Client->>Factory: request object (none available)
+    Factory->>NullObject: create
+    Factory-->>Client: return NullObject
+    Client->>NullObject: operation() (no null check)
+    NullObject-->>Client: no-op (safe default)
+```
+
 ## Participants
 - **AbstractObject** — interface defining operations that both real and null objects must implement
 - **RealObject** — concrete implementation that provides actual behavior

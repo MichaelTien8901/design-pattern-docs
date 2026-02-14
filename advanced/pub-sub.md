@@ -68,6 +68,26 @@ classDiagram
     Topic --> Message : broadcasts
 ```
 
+## Sequence Diagram
+
+```mermaid
+sequenceDiagram
+    participant Publisher1
+    participant Broker
+    participant SubscriberA
+    participant SubscriberB
+
+    Publisher1->>Broker: Send Message to Topic
+    Broker->>SubscriberA: Deliver Message
+    Broker->>SubscriberB: Deliver Message
+    SubscriberA->>SubscriberA: Process independently
+    SubscriberB->>SubscriberB: Process independently
+
+    Publisher1->>Broker: Send another Message
+    Broker->>SubscriberA: Deliver Message
+    Broker->>SubscriberB: Deliver Message
+```
+
 ## Participants
 - **Publisher** — creates and sends messages to topics without knowing subscribers
 - **MessageBroker** — central hub that manages topics and routes messages

@@ -71,6 +71,22 @@ classDiagram
     note for Translator "Converts between\ndomain and external models"
 ```
 
+## Sequence Diagram
+
+```mermaid
+sequenceDiagram
+    participant YS as YourService
+    participant ACL as Anti-Corruption Layer
+    participant ES as ExternalSystem
+
+    YS->>ACL: Request with YourModel
+    ACL->>ACL: Translate YourModel to ExternalModel
+    ACL->>ES: Call with ExternalModel
+    ES-->>ACL: Response in ExternalModel
+    ACL->>ACL: Translate ExternalModel to YourModel
+    ACL-->>YS: Return YourModel
+```
+
 ## Participants
 - **Domain Model** — Your clean, well-designed model that reflects your business logic
 - **Anti-Corruption Layer** — The protective boundary that isolates your domain from external systems

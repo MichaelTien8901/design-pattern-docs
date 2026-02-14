@@ -63,6 +63,26 @@ classDiagram
     Future --> "*" Callback : notifies
 ```
 
+## Sequence Diagram
+
+```mermaid
+sequenceDiagram
+    participant Client
+    participant Promise
+    participant Future
+    participant Producer
+    participant Callback
+
+    Client->>Promise: Create Promise
+    Promise->>Future: Return Future
+    Client->>Future: Chain .then(callback)
+    Future->>Callback: Register callback
+    Producer->>Promise: Resolve with value
+    Promise->>Future: Set value
+    Future->>Callback: Trigger callback
+    Callback->>Client: Return result
+```
+
 ## Participants
 - **Future** — read-only placeholder that represents a value which will be available later, with methods to attach callbacks
 - **Promise** — write-side handle that allows resolving or rejecting the associated future exactly once

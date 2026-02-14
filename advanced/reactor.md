@@ -64,6 +64,31 @@ classDiagram
     Demultiplexer ..> Handle : monitors
 ```
 
+## Sequence Diagram
+
+```mermaid
+sequenceDiagram
+    participant Client1
+    participant Client2
+    participant EventLoop
+    participant Demultiplexer
+    participant Handler1
+    participant Handler2
+
+    Client1->>EventLoop: Register with Handler1
+    Client2->>EventLoop: Register with Handler2
+    EventLoop->>Demultiplexer: Wait for events
+    Client1->>Demultiplexer: I/O ready
+    Demultiplexer->>EventLoop: Client1 ready
+    EventLoop->>Handler1: Dispatch event
+    Handler1->>Client1: Process and respond
+    EventLoop->>Demultiplexer: Continue waiting
+    Client2->>Demultiplexer: I/O ready
+    Demultiplexer->>EventLoop: Client2 ready
+    EventLoop->>Handler2: Dispatch event
+    Handler2->>Client2: Process and respond
+```
+
 ## Participants
 - **Reactor** — runs the event loop, registers handlers, and dispatches events to appropriate handlers
 - **Demultiplexer** — OS-level mechanism (select, epoll, kqueue) that blocks waiting for events on multiple handles

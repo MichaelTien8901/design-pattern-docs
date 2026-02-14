@@ -72,6 +72,29 @@ classDiagram
     Client --> ISpecification
 ```
 
+## Sequence Diagram
+
+```mermaid
+sequenceDiagram
+    participant Client
+    participant AgeSpec as AgeSpecification
+    participant CountrySpec as CountrySpecification
+    participant AndSpec as AndSpecification
+    participant Repository
+    participant Entity
+
+    Client->>AgeSpec: new AgeSpecification(18)
+    Client->>CountrySpec: new CountrySpecification("US")
+    Client->>AndSpec: AgeSpec.and(CountrySpec)
+    Client->>Repository: findAll(AndSpec)
+    Repository->>Entity: for each entity
+    Repository->>AndSpec: isSatisfiedBy(entity)
+    AndSpec->>AgeSpec: isSatisfiedBy(entity)
+    AndSpec->>CountrySpec: isSatisfiedBy(entity)
+    AndSpec-->>Repository: return true/false
+    Repository-->>Client: return matching entities
+```
+
 ## Participants
 - **ISpecification** — interface defining isSatisfiedBy method and composition operations (and, or, not)
 - **ConcreteSpecification** — implements specific business rule by evaluating a candidate object
