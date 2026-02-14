@@ -200,3 +200,32 @@ For each entry, the hardware concept maps to specific pattern(s), with an explan
 | Root of Trust | Singleton (immutable) | Physically immutable, unlike software |
 | Secure Boot | CoR, Builder | Failure halts entire system |
 | TrustZone/SGX | Bulkhead, Sandbox | Bus fabric enforces isolation |
+
+## References
+
+| Topic | Resource | Link |
+|-------|----------|------|
+| PCIe Data Poisoning | OCP Poison White Paper | [opencompute.org](https://www.opencompute.org/documents/using-poison-to-contain-and-recover-from-uncorrected-errors-pdf) |
+| PCIe Data Poisoning | Intel Error Reporting | [intel.com](https://www.intel.com/content/www/us/en/docs/programmable/683647/18-0/error-reporting-and-data-poisoning.html) |
+| PCIe Flow Control | Intel Credit Handling | [intel.com](https://www.intel.com/content/www/us/en/docs/programmable/790711/24-1-2-0-0/flow-control-credit-handling.html) |
+| PCIe AER | Linux AER HOWTO | [kernel.org](https://docs.kernel.org/PCI/pcieaer-howto.html) |
+| AXI/AMBA | ARM AXI Specification | [developer.arm.com](https://developer.arm.com/documentation/ihi0022/latest/) |
+| AXI Handshake | VHDLwhiz AXI Guide | [vhdlwhiz.com](https://vhdlwhiz.com/how-the-axi-style-ready-valid-handshake-works/) |
+| CXL | CXL Consortium | [computeexpresslink.org](https://www.computeexpresslink.org/) |
+| CXL | Rambus CXL Overview | [rambus.com](https://www.rambus.com/blogs/compute-express-link/) |
+| CPU Pipeline | Berkeley Pipeline Pattern | [berkeley.edu](https://patterns.eecs.berkeley.edu/?page_id=542) |
+| Cache Coherence | MESI Protocol | [Wikipedia](https://en.wikipedia.org/wiki/MESI_protocol) |
+| Cache Coherence | Coherence Primer | [Wikipedia](https://en.wikipedia.org/wiki/Cache_coherency_protocols_(examples)) |
+| Memory Hierarchy | Memory Hierarchy | [Wikipedia](https://en.wikipedia.org/wiki/Memory_hierarchy) |
+| Interrupts | APIC | [Wikipedia](https://en.wikipedia.org/wiki/Advanced_Programmable_Interrupt_Controller) |
+| DMA | DMA Overview | [Wikipedia](https://en.wikipedia.org/wiki/Direct_memory_access) |
+| IOMMU | IOMMU Overview | [Wikipedia](https://en.wikipedia.org/wiki/Input%E2%80%93output_memory_management_unit) |
+| Clock Domain Crossing | Verilog Pro CDC | [verilogpro.com](https://www.verilogpro.com/clock-domain-crossing-part-1/) |
+| Arbiters | Arbiter Design Styles | [Paper (PDF)](https://abdullahyildiz.github.io/files/Arbiters-Design_Ideas_and_Coding_Styles.pdf) |
+| NoC | Network on Chip | [Wikipedia](https://en.wikipedia.org/wiki/Network_on_a_chip) |
+| Root of Trust | Rambus HRoT | [rambus.com](https://www.rambus.com/blogs/hardware-root-of-trust/) |
+| Secure Boot | Cloudflare Secure Boot | [blog.cloudflare.com](https://blog.cloudflare.com/anchoring-trust-a-hardware-secure-boot-story/) |
+| TrustZone | ARM TrustZone | [developer.arm.com](https://developer.arm.com/documentation/102418/latest/) |
+| Rust RAII | Rust by Example | [doc.rust-lang.org](https://doc.rust-lang.org/rust-by-example/scope/raii.html) |
+| ECC | ECC Memory | [Wikipedia](https://en.wikipedia.org/wiki/ECC_memory) |
+| Watchdog | Watchdog Best Practices | [memfault.com](https://interrupt.memfault.com/blog/firmware-watchdog-best-practices) |

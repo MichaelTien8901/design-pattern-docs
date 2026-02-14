@@ -127,3 +127,25 @@ Design patterns aren't just textbook concepts — they're deeply embedded in the
 | Load Balancers | Strategy, Proxy | Pluggable algorithms + reverse proxy |
 | DNS | Chain of Responsibility, Caching Proxy | Hierarchical delegation + TTL cache |
 | TLS | State Machine, Strategy | Handshake states + cipher selection |
+
+## References
+
+| System | Resource | Link |
+|--------|----------|------|
+| D-Bus | D-Bus Tutorial | [freedesktop.org](https://dbus.freedesktop.org/doc/dbus-tutorial.html) |
+| D-Bus | D-Bus Specification | [freedesktop.org](https://dbus.freedesktop.org/doc/dbus-specification.html) |
+| systemd | systemctl Guide | [DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-use-systemctl-to-manage-systemd-services-and-units) |
+| systemd | systemd Documentation | [freedesktop.org](https://www.freedesktop.org/software/systemd/man/latest/) |
+| udev | udev ArchWiki | [wiki.archlinux.org](https://wiki.archlinux.org/title/Udev) |
+| udev | Kernel Device Model | [kernel.org](https://docs.kernel.org/driver-api/driver-model/) |
+| procfs/sysfs | procfs Documentation | [kernel.org](https://docs.kernel.org/filesystems/proc.html) |
+| procfs/sysfs | sysfs Rules | [kernel.org](https://docs.kernel.org/admin-guide/sysfs-rules.html) |
+| Linux VFS | VFS Documentation | [kernel.org](https://docs.kernel.org/filesystems/vfs.html) |
+| TCP/IP | TCP/IP Guide | [Oracle Docs](https://docs.oracle.com/cd/E19683-01/806-4075/ipov-10/index.html) |
+| nginx | nginx Architecture | [nginx.org](https://nginx.org/en/docs/) |
+| nginx | Inside NGINX | [nginx.com](https://www.nginx.com/blog/inside-nginx-how-we-designed-for-performance-scale/) |
+| Load Balancers | HAProxy Documentation | [haproxy.com](https://www.haproxy.com/documentation/) |
+| DNS | How DNS Works | [Cloudflare](https://www.cloudflare.com/learning/dns/what-is-dns/) |
+| DNS | Recursive DNS | [Cloudflare](https://www.cloudflare.com/learning/dns/what-is-recursive-dns/) |
+| TLS | TLS Handshake | [Cloudflare](https://www.cloudflare.com/learning/ssl/what-happens-in-a-tls-handshake/) |
+| TLS | Illustrated TLS 1.2 | [tls12.xargs.org](https://tls12.xargs.org/) |

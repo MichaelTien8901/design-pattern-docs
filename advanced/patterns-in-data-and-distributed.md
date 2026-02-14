@@ -208,3 +208,34 @@ Design patterns aren't confined to application code—they're fundamental buildi
 | | Go | CSP | Goroutines + typed channels |
 | | Python GIL | Monitor | Mutex + condition variable |
 | | Rust | RAII | Compile-time enforced Drop |
+
+## References
+
+| System | Resource | Link |
+|--------|----------|------|
+| Connection Pooling | HikariCP GitHub | [github.com/brettwooldridge](https://github.com/brettwooldridge/HikariCP) |
+| Connection Pooling | pgBouncer | [pgbouncer.org](https://www.pgbouncer.org/) |
+| Query Optimizer | PostgreSQL Planner | [postgresql.org](https://www.postgresql.org/docs/current/planner-optimizer.html) |
+| MVCC | MVCC in PostgreSQL | [postgresql.org](https://www.postgresql.org/docs/current/mvcc.html) |
+| WAL | WAL Introduction | [postgresql.org](https://www.postgresql.org/docs/current/wal-intro.html) |
+| B-Tree | PostgreSQL B-Tree | [postgresql.org](https://www.postgresql.org/docs/current/btree.html) |
+| Kubernetes | Controller Runtime | [github.com/kubernetes-sigs](https://github.com/kubernetes-sigs/controller-runtime) |
+| Kubernetes | Sidecar Pattern | [kubernetes.io](https://kubernetes.io/blog/2015/06/the-distributed-system-toolkit-patterns/) |
+| Docker | Multi-Stage Builds | [docs.docker.com](https://docs.docker.com/build/building/multi-stage/) |
+| Docker | OverlayFS | [kernel.org](https://docs.kernel.org/filesystems/overlayfs.html) |
+| Kafka | Kafka Documentation | [kafka.apache.org](https://kafka.apache.org/documentation/) |
+| Kafka | Event Streaming | [confluent.io](https://www.confluent.io/learn/event-streaming/) |
+| etcd | etcd Documentation | [etcd.io](https://etcd.io/docs/) |
+| ZooKeeper | ZooKeeper Recipes | [zookeeper.apache.org](https://zookeeper.apache.org/doc/current/recipes.html) |
+| gRPC | gRPC Introduction | [grpc.io](https://grpc.io/docs/what-is-grpc/introduction/) |
+| gRPC | grpc-gateway | [github.com/grpc-ecosystem](https://github.com/grpc-ecosystem/grpc-gateway) |
+| Istio | Circuit Breaking | [istio.io](https://istio.io/latest/docs/tasks/traffic-management/circuit-breaking/) |
+| RabbitMQ | Dead Letter Exchanges | [rabbitmq.com](https://www.rabbitmq.com/docs/dlx) |
+| Redis | Pub/Sub | [redis.io](https://redis.io/docs/latest/develop/interact/pubsub/) |
+| Apache Camel | EIP Catalog | [camel.apache.org](https://camel.apache.org/components/4.x/eips/enterprise-integration-patterns.html) |
+| JVM GC | GC Deep Dive | [Baeldung](https://www.baeldung.com/jvm-garbage-collectors) |
+| Node.js | Event Loop | [nodejs.org](https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick) |
+| Go | Concurrency | [go.dev](https://go.dev/doc/effective_go#concurrency) |
+| Python GIL | Understanding the GIL | [realpython.com](https://realpython.com/python-gil/) |
+| Rust | RAII | [doc.rust-lang.org](https://doc.rust-lang.org/rust-by-example/scope/raii.html) |
+| Rust | Ownership | [doc.rust-lang.org](https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html) |
