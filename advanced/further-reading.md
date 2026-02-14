@@ -96,3 +96,22 @@ Additional design patterns organized by category. Each entry includes a brief de
 |---------|-------------|-----------|
 | Multiton | Map of named singleton instances | [Wikipedia](https://en.wikipedia.org/wiki/Multiton_pattern) |
 | Lazy Initialization | Defer creation until first use | [Wikipedia](https://en.wikipedia.org/wiki/Lazy_initialization) |
+
+## Pattern Collection Websites
+
+Comprehensive online resources for learning and referencing design patterns:
+
+| Resource | Description | Link |
+|----------|-------------|------|
+| Refactoring.Guru | Visual explanations of all GoF patterns with code in 10+ languages | [refactoring.guru](https://refactoring.guru/design-patterns) |
+| SourceMaking | Design patterns, anti-patterns, and refactoring catalog | [sourcemaking.com](https://sourcemaking.com/design_patterns) |
+| Patterns of Enterprise Application Architecture | Martin Fowler's PoEAA catalog | [martinfowler.com](https://martinfowler.com/eaaCatalog/) |
+| Enterprise Integration Patterns | Hohpe & Woolf's messaging patterns catalog | [enterpriseintegrationpatterns.com](https://www.enterpriseintegrationpatterns.com/patterns/messaging/) |
+| Game Programming Patterns | Robert Nystrom's free online book | [gameprogrammingpatterns.com](https://gameprogrammingpatterns.com/) |
+| Cloud Design Patterns | Microsoft Azure's cloud architecture patterns | [learn.microsoft.com](https://learn.microsoft.com/en-us/azure/architecture/patterns/) |
+| Microservices Patterns | Chris Richardson's microservices pattern catalog | [microservices.io](https://microservices.io/patterns/) |
+| Design Patterns for Humans | Ultra-simplified explanations with real-world examples | [github.com/kamranahmedse](https://github.com/kamranahmedse/design-patterns-for-humans) |
+| Awesome Design Patterns | Curated list of design pattern resources by language | [github.com/DovAmir](https://github.com/DovAmir/awesome-design-patterns) |
+| Java Design Patterns | Open-source collection with Java implementations | [java-design-patterns.com](https://java-design-patterns.com/) |
+| Rust Design Patterns | Idiomatic Rust patterns and anti-patterns | [rust-unofficial.github.io](https://rust-unofficial.github.io/patterns/) |
+| Python Patterns | Collection of design patterns in Python | [python-patterns.guide](https://python-patterns.guide/) |
