@@ -54,6 +54,16 @@ Modern design patterns that have emerged since the original Gang of Four book (1
 | [MVVM]({% link advanced/mvvm.md %}) | Separate UI from logic via a ViewModel with data binding |
 | [Specification]({% link advanced/specification.md %}) | Encapsulate business rules as composable predicate objects |
 
+## Patterns in Practice
+
+See how design patterns manifest in real-world systems:
+
+| Page | Covers |
+|------|--------|
+| [OS & Networking]({% link advanced/patterns-in-os-and-networking.md %}) | D-Bus, systemd, udev, VFS, TCP/IP, nginx, DNS, TLS |
+| [Data & Distributed Systems]({% link advanced/patterns-in-data-and-distributed.md %}) | Databases, Kubernetes, Docker, Kafka, gRPC, Istio, Go, Rust |
+| [Hardware Design]({% link advanced/patterns-in-hardware.md %}) | PCIe, AXI, CPU pipelines, cache coherence, DMA, FPGA, secure boot |
+
 ## Further Reading
 
 Looking for even more patterns? See the [Further Reading]({% link advanced/further-reading.md %}) page for ~50 additional patterns from enterprise integration, functional programming, game development, and more.
