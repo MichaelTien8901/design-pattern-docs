@@ -215,7 +215,7 @@ For each entry, the hardware concept maps to specific pattern(s), with an explan
 | CXL | Rambus CXL Overview | [rambus.com](https://www.rambus.com/blogs/compute-express-link/) |
 | CPU Pipeline | Berkeley Pipeline Pattern | [berkeley.edu](https://patterns.eecs.berkeley.edu/?page_id=542) |
 | Cache Coherence | MESI Protocol | [Wikipedia](https://en.wikipedia.org/wiki/MESI_protocol) |
-| Cache Coherence | Coherence Primer | [Wikipedia](https://en.wikipedia.org/wiki/Cache_coherency_protocols_(examples)) |
+| Cache Coherence | Coherence Primer | [Wikipedia](https://en.wikipedia.org/wiki/Cache_coherence) |
 | Memory Hierarchy | Memory Hierarchy | [Wikipedia](https://en.wikipedia.org/wiki/Memory_hierarchy) |
 | Interrupts | APIC | [Wikipedia](https://en.wikipedia.org/wiki/Advanced_Programmable_Interrupt_Controller) |
 | DMA | DMA Overview | [Wikipedia](https://en.wikipedia.org/wiki/Direct_memory_access) |

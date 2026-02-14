@@ -60,17 +60,17 @@ Additional design patterns organized by category. Each entry includes a brief de
 | Producer-Consumer | Decouple producers/consumers with shared buffer | [Wikipedia](https://en.wikipedia.org/wiki/Producer%E2%80%93consumer_problem) |
 | Read-Write Lock | Concurrent reads, exclusive writes | [Wikipedia](https://en.wikipedia.org/wiki/Readers%E2%80%93writer_lock) |
 | Proactor | Async I/O completion dispatching | [Wikipedia](https://en.wikipedia.org/wiki/Proactor_pattern) |
-| Half-Sync/Half-Async | Separate sync and async processing layers | [Wikipedia](https://en.wikipedia.org/wiki/Half-sync/half-async) |
+| Half-Sync/Half-Async | Separate sync and async processing layers | [POSA2](https://www.dre.vanderbilt.edu/~schmidt/POSA/POSA2/) |
 | Leader/Followers | Thread pool taking turns as event leader | [Wikipedia](https://en.wikipedia.org/wiki/Leader/followers_pattern) |
 
 ## Functional Programming Patterns
 | Pattern | Description | Reference |
 |---------|-------------|-----------|
-| Monad | Encapsulate computations with context, compose via bind | [Wikipedia](https://en.wikipedia.org/wiki/Monad_(functional_programming)) |
+| Monad | Encapsulate computations with context, compose via bind | [Wikipedia](https://en.wikipedia.org/wiki/Monad_%28functional_programming%29) |
 | Option/Maybe | Typed presence/absence without null | [Wikipedia](https://en.wikipedia.org/wiki/Option_type) |
 | Either/Result | Typed success/failure without exceptions | [Wikipedia](https://en.wikipedia.org/wiki/Result_type) |
-| Functor | Apply function over wrapped value | [Wikipedia](https://en.wikipedia.org/wiki/Functor_(functional_programming)) |
-| Lens | Composable immutable getters/setters for nested data | [Wikipedia](https://en.wikipedia.org/wiki/Optics_(computer_science)) |
+| Functor | Apply function over wrapped value | [Wikipedia](https://en.wikipedia.org/wiki/Functor_%28functional_programming%29) |
+| Lens | Composable immutable getters/setters for nested data | [Wikipedia](https://en.wikipedia.org/wiki/Optics_%28computer_science%29) |
 | Higher-Order Function | Functions taking/returning functions | [Wikipedia](https://en.wikipedia.org/wiki/Higher-order_function) |
 | Algebraic Data Types | Sum types + product types with pattern matching | [Wikipedia](https://en.wikipedia.org/wiki/Algebraic_data_type) |
 

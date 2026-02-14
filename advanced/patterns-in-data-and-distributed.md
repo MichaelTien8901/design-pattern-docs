@@ -232,7 +232,7 @@ Design patterns aren't confined to application code—they're fundamental buildi
 | Istio | Circuit Breaking | [istio.io](https://istio.io/latest/docs/tasks/traffic-management/circuit-breaking/) |
 | RabbitMQ | Dead Letter Exchanges | [rabbitmq.com](https://www.rabbitmq.com/docs/dlx) |
 | Redis | Pub/Sub | [redis.io](https://redis.io/docs/latest/develop/interact/pubsub/) |
-| Apache Camel | EIP Catalog | [camel.apache.org](https://camel.apache.org/components/4.x/eips/enterprise-integration-patterns.html) |
+| Apache Camel | EIP Catalog | [camel.apache.org](https://camel.apache.org/components/next/eips/enterprise-integration-patterns.html) |
 | JVM GC | GC Deep Dive | [Baeldung](https://www.baeldung.com/jvm-garbage-collectors) |
 | Node.js | Event Loop | [nodejs.org](https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick) |
 | Go | Concurrency | [go.dev](https://go.dev/doc/effective_go#concurrency) |
