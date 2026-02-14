@@ -108,6 +108,98 @@ sequenceDiagram
 - Adds extra classes to the codebase, increasing the number of types to maintain
 - May confuse developers who expect null checks and don't realize Null Object is in use
 
+## Example Code
+
+### C#
+
+```csharp
+using System;
+
+// Logger interface
+interface ILogger
+{
+    void Log(string message);
+    void LogError(string error);
+}
+
+// Real logger implementation
+class ConsoleLogger : ILogger
+{
+    public void Log(string message)
+    {
+        Console.WriteLine($"[INFO] {message}");
+    }
+
+    public void LogError(string error)
+    {
+        Console.WriteLine($"[ERROR] {error}");
+    }
+}
+
+// Null Object implementation - does nothing silently
+class NullLogger : ILogger
+{
+    public void Log(string message)
+    {
+        // Do nothing - no output
+    }
+
+    public void LogError(string error)
+    {
+        // Do nothing - no output
+    }
+}
+
+// Client class that uses logger
+class UserService
+{
+    private readonly ILogger _logger;
+
+    public UserService(ILogger logger)
+    {
+        _logger = logger;
+    }
+
+    public void CreateUser(string username)
+    {
+        _logger.Log($"Creating user: {username}");
+
+        // Business logic here
+        if (string.IsNullOrEmpty(username))
+        {
+            _logger.LogError("Username cannot be empty");
+            return;
+        }
+
+        _logger.Log($"User {username} created successfully");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("=== With ConsoleLogger ===");
+        var serviceWithLogging = new UserService(new ConsoleLogger());
+        serviceWithLogging.CreateUser("alice");
+        serviceWithLogging.CreateUser("");
+
+        Console.WriteLine("\n=== With NullLogger ===");
+        var serviceWithoutLogging = new UserService(new NullLogger());
+        serviceWithoutLogging.CreateUser("bob");
+        serviceWithoutLogging.CreateUser("");
+
+        Console.WriteLine("(No output from NullLogger - operations completed silently)");
+    }
+}
+```
+
+## Runnable Examples
+
+| Language | File |
+|----------|------|
+| C# | [null-object.cs]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/docs/examples/csharp/advanced/null-object.cs) |
+
 ## Related Patterns
 - **Strategy** — Null Object can be viewed as a special-case strategy with do-nothing behavior
 - **State** — Null Object is sometimes used as a special state representing absence
