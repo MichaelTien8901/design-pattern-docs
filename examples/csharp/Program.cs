@@ -32,6 +32,15 @@ class Program
             ("Template Method", DesignPatterns.TemplateMethod.Demo.Run),
             ("Visitor", DesignPatterns.Visitor.Demo.Run),
             ("Interpreter", DesignPatterns.Interpreter.Demo.Run),
+            // Advanced
+            ("Circuit Breaker", DesignPatterns.Advanced.CircuitBreaker.Demo.Run),
+            ("Dependency Injection", DesignPatterns.Advanced.DependencyInjection.Demo.Run),
+            ("Future / Promise", DesignPatterns.Advanced.FuturePromise.Demo.Run),
+            ("Null Object", DesignPatterns.Advanced.NullObject.Demo.Run),
+            ("Object Pool", DesignPatterns.Advanced.ObjectPool.Demo.Run),
+            ("Publish-Subscribe", DesignPatterns.Advanced.PubSub.Demo.Run),
+            ("Repository", DesignPatterns.Advanced.Repository.Demo.Run),
+            ("Specification", DesignPatterns.Advanced.Specification.Demo.Run),
         };
 
         foreach (var (name, run) in patterns)
