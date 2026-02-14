@@ -330,6 +330,14 @@ int main() {
 }
 ```
 
+### Runnable Examples
+
+| Language | Source |
+|----------|--------|
+| C# | [`State.cs`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/csharp/Patterns/State.cs) |
+| C++ | [`state.cpp`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/cpp/state.cpp) |
+| Delphi | [`state.pas`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/delphi/state.pas) |
+
 ## Related Patterns
 
 - [**Flyweight**]({% link structural/flyweight.md %}) — State objects with no instance variables can be shared as Flyweights.

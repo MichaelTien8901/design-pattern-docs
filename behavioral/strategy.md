@@ -254,6 +254,14 @@ int main() {
 }
 ```
 
+### Runnable Examples
+
+| Language | Source |
+|----------|--------|
+| C# | [`Strategy.cs`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/csharp/Patterns/Strategy.cs) |
+| C++ | [`strategy.cpp`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/cpp/strategy.cpp) |
+| Delphi | [`strategy.pas`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/delphi/strategy.pas) |
+
 ## Related Patterns
 
 - [**Flyweight**]({% link structural/flyweight.md %}) — Strategy objects can be shared as Flyweights if they carry no state.

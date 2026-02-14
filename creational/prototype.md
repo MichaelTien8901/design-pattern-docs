@@ -219,6 +219,14 @@ public:
 };
 ```
 
+### Runnable Examples
+
+| Language | Source |
+|----------|--------|
+| C# | [`Prototype.cs`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/csharp/Patterns/Prototype.cs) |
+| C++ | [`prototype.cpp`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/cpp/prototype.cpp) |
+| Delphi | [`prototype.pas`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/delphi/prototype.pas) |
+
 ## Related Patterns
 
 - [Abstract Factory]({% link creational/abstract-factory.md %}) — can use Prototype to create products

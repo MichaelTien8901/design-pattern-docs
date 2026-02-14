@@ -167,6 +167,14 @@ public:
 };
 ```
 
+### Runnable Examples
+
+| Language | Source |
+|----------|--------|
+| C# | [`Adapter.cs`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/csharp/Patterns/Adapter.cs) |
+| C++ | [`adapter.cpp`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/cpp/adapter.cpp) |
+| Delphi | [`adapter.pas`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/delphi/adapter.pas) |
+
 ## Related Patterns
 
 - [Bridge]({% link structural/bridge.md %}) -- has a similar structure but a different intent; Bridge separates abstraction from implementation, while Adapter makes incompatible interfaces work together.

@@ -268,6 +268,14 @@ public:
 };
 ```
 
+### Runnable Examples
+
+| Language | Source |
+|----------|--------|
+| C# | [`AbstractFactory.cs`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/csharp/Patterns/AbstractFactory.cs) |
+| C++ | [`abstract-factory.cpp`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/cpp/abstract-factory.cpp) |
+| Delphi | [`abstract_factory.pas`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/delphi/abstract_factory.pas) |
+
 ## Related Patterns
 
 - [Factory Method]({% link creational/factory-method.md %}) — Abstract Factory classes are often implemented with factory methods

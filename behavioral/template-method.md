@@ -339,6 +339,14 @@ int main() {
 }
 ```
 
+### Runnable Examples
+
+| Language | Source |
+|----------|--------|
+| C# | [`TemplateMethod.cs`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/csharp/Patterns/TemplateMethod.cs) |
+| C++ | [`template-method.cpp`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/cpp/template-method.cpp) |
+| Delphi | [`template_method.pas`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/delphi/template_method.pas) |
+
 ## Related Patterns
 
 - [**Factory Method**]({% link creational/factory-method.md %}) — Factory Method is often called by template methods to create objects.

@@ -334,6 +334,14 @@ int main() {
 }
 ```
 
+### Runnable Examples
+
+| Language | Source |
+|----------|--------|
+| C# | [`Command.cs`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/csharp/Patterns/Command.cs) |
+| C++ | [`command.cpp`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/cpp/command.cpp) |
+| Delphi | [`command.pas`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/delphi/command.pas) |
+
 ## Related Patterns
 
 - [**Composite**]({% link structural/composite.md %}) — Macro-commands can be composed using the Composite pattern.

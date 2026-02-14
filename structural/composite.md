@@ -224,6 +224,14 @@ public:
 };
 ```
 
+### Runnable Examples
+
+| Language | Source |
+|----------|--------|
+| C# | [`Composite.cs`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/csharp/Patterns/Composite.cs) |
+| C++ | [`composite.cpp`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/cpp/composite.cpp) |
+| Delphi | [`composite.pas`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/delphi/composite.pas) |
+
 ## Related Patterns
 
 - [Chain of Responsibility]({% link behavioral/chain-of-responsibility.md %}) -- can be used with Composite to let requests propagate up the tree.

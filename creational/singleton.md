@@ -159,6 +159,14 @@ public:
 // Usage: AppConfig::getInstance().showConfig();
 ```
 
+### Runnable Examples
+
+| Language | Source |
+|----------|--------|
+| C# | [`Singleton.cs`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/csharp/Patterns/Singleton.cs) |
+| C++ | [`singleton.cpp`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/cpp/singleton.cpp) |
+| Delphi | [`singleton.pas`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/delphi/singleton.pas) |
+
 ## Related Patterns
 
 - [Abstract Factory]({% link creational/abstract-factory.md %}) — a concrete factory is often a singleton

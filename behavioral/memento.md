@@ -271,6 +271,14 @@ int main() {
 }
 ```
 
+### Runnable Examples
+
+| Language | Source |
+|----------|--------|
+| C# | [`Memento.cs`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/csharp/Patterns/Memento.cs) |
+| C++ | [`memento.cpp`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/cpp/memento.cpp) |
+| Delphi | [`memento.pas`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/delphi/memento.pas) |
+
 ## Related Patterns
 
 - [**Command**]({% link behavioral/command.md %}) — Commands can use mementos to store state for undoable operations.

@@ -311,6 +311,14 @@ int main() {
 }
 ```
 
+### Runnable Examples
+
+| Language | Source |
+|----------|--------|
+| C# | [`ChainOfResponsibility.cs`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/csharp/Patterns/ChainOfResponsibility.cs) |
+| C++ | [`chain-of-responsibility.cpp`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/cpp/chain-of-responsibility.cpp) |
+| Delphi | [`chain_of_responsibility.pas`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/delphi/chain_of_responsibility.pas) |
+
 ## Related Patterns
 
 - [**Composite**]({% link structural/composite.md %}) — The chain often follows a composite structure where parent components act as successors.

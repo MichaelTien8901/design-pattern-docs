@@ -206,6 +206,14 @@ public:
 };
 ```
 
+### Runnable Examples
+
+| Language | Source |
+|----------|--------|
+| C# | [`Proxy.cs`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/csharp/Patterns/Proxy.cs) |
+| C++ | [`proxy.cpp`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/cpp/proxy.cpp) |
+| Delphi | [`proxy.pas`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/delphi/proxy.pas) |
+
 ## Related Patterns
 
 - [Adapter]({% link structural/adapter.md %}) -- provides a different interface to the object it adapts, whereas Proxy provides the same interface.

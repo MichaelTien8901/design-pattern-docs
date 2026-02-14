@@ -274,6 +274,14 @@ int main() {
 }
 ```
 
+### Runnable Examples
+
+| Language | Source |
+|----------|--------|
+| C# | [`Iterator.cs`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/csharp/Patterns/Iterator.cs) |
+| C++ | [`iterator.cpp`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/cpp/iterator.cpp) |
+| Delphi | [`iterator.pas`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/delphi/iterator.pas) |
+
 ## Related Patterns
 
 - [**Composite**]({% link structural/composite.md %}) — Iterators are often used to traverse Composite structures.

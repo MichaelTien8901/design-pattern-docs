@@ -337,6 +337,14 @@ int main() {
 }
 ```
 
+### Runnable Examples
+
+| Language | Source |
+|----------|--------|
+| C# | [`Visitor.cs`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/csharp/Patterns/Visitor.cs) |
+| C++ | [`visitor.cpp`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/cpp/visitor.cpp) |
+| Delphi | [`visitor.pas`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/delphi/visitor.pas) |
+
 ## Related Patterns
 
 - [**Composite**]({% link structural/composite.md %}) — Visitor can be used to apply an operation over a Composite tree.

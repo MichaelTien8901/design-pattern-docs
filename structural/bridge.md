@@ -251,6 +251,14 @@ public:
 };
 ```
 
+### Runnable Examples
+
+| Language | Source |
+|----------|--------|
+| C# | [`Bridge.cs`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/csharp/Patterns/Bridge.cs) |
+| C++ | [`bridge.cpp`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/cpp/bridge.cpp) |
+| Delphi | [`bridge.pas`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/delphi/bridge.pas) |
+
 ## Related Patterns
 
 - [Abstract Factory]({% link creational/abstract-factory.md %}) -- can be used to create and configure a particular Bridge.

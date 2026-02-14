@@ -269,6 +269,14 @@ int main() {
 }
 ```
 
+### Runnable Examples
+
+| Language | Source |
+|----------|--------|
+| C# | [`Mediator.cs`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/csharp/Patterns/Mediator.cs) |
+| C++ | [`mediator.cpp`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/cpp/mediator.cpp) |
+| Delphi | [`mediator.pas`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/delphi/mediator.pas) |
+
 ## Related Patterns
 
 - [**Facade**]({% link structural/facade.md %}) — Facade abstracts a subsystem of objects to provide a simpler interface, whereas Mediator centralizes communication between colleague objects.

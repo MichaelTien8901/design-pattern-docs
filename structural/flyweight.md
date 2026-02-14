@@ -200,6 +200,14 @@ public:
 };
 ```
 
+### Runnable Examples
+
+| Language | Source |
+|----------|--------|
+| C# | [`Flyweight.cs`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/csharp/Patterns/Flyweight.cs) |
+| C++ | [`flyweight.cpp`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/cpp/flyweight.cpp) |
+| Delphi | [`flyweight.pas`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/delphi/flyweight.pas) |
+
 ## Related Patterns
 
 - [Composite]({% link structural/composite.md %}) -- Flyweight is often combined with Composite to share leaf nodes.

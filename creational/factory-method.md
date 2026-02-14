@@ -250,6 +250,14 @@ public:
 };
 ```
 
+### Runnable Examples
+
+| Language | Source |
+|----------|--------|
+| C# | [`FactoryMethod.cs`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/csharp/Patterns/FactoryMethod.cs) |
+| C++ | [`factory-method.cpp`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/cpp/factory-method.cpp) |
+| Delphi | [`factory_method.pas`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/delphi/factory_method.pas) |
+
 ## Related Patterns
 
 - [Abstract Factory]({% link creational/abstract-factory.md %}) — often implemented with factory methods

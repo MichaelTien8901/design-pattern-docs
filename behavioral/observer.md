@@ -303,6 +303,14 @@ int main() {
 }
 ```
 
+### Runnable Examples
+
+| Language | Source |
+|----------|--------|
+| C# | [`Observer.cs`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/csharp/Patterns/Observer.cs) |
+| C++ | [`observer.cpp`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/cpp/observer.cpp) |
+| Delphi | [`observer.pas`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/delphi/observer.pas) |
+
 ## Related Patterns
 
 - [**Mediator**]({% link behavioral/mediator.md %}) — Mediator encapsulates communication between objects, often using Observer internally.

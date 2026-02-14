@@ -252,6 +252,14 @@ public:
 };
 ```
 
+### Runnable Examples
+
+| Language | Source |
+|----------|--------|
+| C# | [`Facade.cs`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/csharp/Patterns/Facade.cs) |
+| C++ | [`facade.cpp`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/cpp/facade.cpp) |
+| Delphi | [`facade.pas`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/delphi/facade.pas) |
+
 ## Related Patterns
 
 - [Abstract Factory]({% link creational/abstract-factory.md %}) -- can be used with Facade to provide an interface for creating subsystem objects in a subsystem-independent way.

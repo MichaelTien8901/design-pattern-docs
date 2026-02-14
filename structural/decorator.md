@@ -220,6 +220,14 @@ public:
 };
 ```
 
+### Runnable Examples
+
+| Language | Source |
+|----------|--------|
+| C# | [`Decorator.cs`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/csharp/Patterns/Decorator.cs) |
+| C++ | [`decorator.cpp`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/cpp/decorator.cpp) |
+| Delphi | [`decorator.pas`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/delphi/decorator.pas) |
+
 ## Related Patterns
 
 - [Adapter]({% link structural/adapter.md %}) -- changes an object's interface, while Decorator enhances it without changing the interface.

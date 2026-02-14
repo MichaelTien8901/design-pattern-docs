@@ -257,6 +257,14 @@ public:
 };
 ```
 
+### Runnable Examples
+
+| Language | Source |
+|----------|--------|
+| C# | [`Builder.cs`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/csharp/Patterns/Builder.cs) |
+| C++ | [`builder.cpp`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/cpp/builder.cpp) |
+| Delphi | [`builder.pas`]({% raw %}{{ site.github.repository_url }}{% endraw %}/blob/main/examples/delphi/builder.pas) |
+
 ## Related Patterns
 
 - [Abstract Factory]({% link creational/abstract-factory.md %}) — Builder focuses on step-by-step construction; Abstract Factory emphasizes families of products
