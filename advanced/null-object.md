@@ -16,7 +16,7 @@ Code that frequently checks for null references becomes cluttered with condition
 ## Real-World Analogy
 
 {: .note }
-> Think of the Unix device `/dev/null`. When programs write output to `/dev/null`, the data simply disappears—it's silently discarded without error. This "null device" conforms to the same interface as any other output device (you can write to it), but its implementation does nothing. Programs don't need special logic to handle `/dev/null` differently; they treat it like any other output target. This is far cleaner than littering the code with "if output exists, then write to it" checks everywhere.
+> Think of a mannequin standing in a store's security guard uniform. It looks like a real guard — same uniform, same posture, same position by the door. Customers don't need to check whether it's real before walking past; they just behave normally. The mannequin fulfills the "guard" role by doing nothing, and the store doesn't need special "if there's no guard, then skip the greeting" logic. It simply places the mannequin where a real guard would stand, and everything works without null checks.
 
 ## When You Need It
 - You find yourself writing repetitive null checks before invoking methods on potentially absent objects

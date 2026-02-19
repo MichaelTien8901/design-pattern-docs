@@ -16,7 +16,7 @@ Traditional CRUD systems use the same model for reading and writing data, leadin
 ## Real-World Analogy
 
 {: .note }
-> Think of a restaurant where the kitchen (command side) handles food preparation with complex recipes, inventory management, and quality control, while the menu display (query side) shows customers a simple, optimized view of available dishes with prices and descriptions. The kitchen doesn't need to know how menus are formatted, and customers don't need to see the cooking process. Each side is optimized for its specific purpose.
+> Think of a bank with teller windows and an account balance display board. Deposits, withdrawals, and transfers (commands) go through tellers who verify identity, check funds, apply business rules, and update the ledger — a complex, carefully validated process. Meanwhile, customers checking their balance (queries) glance at a fast, read-only display screen that's optimized for quick lookups. The tellers and the display board read from different representations of the same data, each optimized for its purpose. You'd never ask the display board to process a transfer, and you wouldn't wait in the teller line just to check your balance.
 
 ## When You Need It
 - You have complex domain logic on writes but simple, fast queries needed on reads

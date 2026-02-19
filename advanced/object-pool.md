@@ -16,7 +16,7 @@ Creating certain objects is expensive due to resource allocation costs like data
 ## Real-World Analogy
 
 {: .note }
-> Think of a library that lends books. Instead of printing a new copy every time someone wants to read a book and shredding it when they're done, the library maintains a collection of books. When you want a book, you check it out from the library's shelf. If all copies are checked out, you wait or get an error. When you finish, you return the book to the shelf for others to use. This is far more efficient than printing millions of copies. The library might have 5 copies of a popular book—enough to handle normal demand without wasting resources on hundreds of copies that would sit unused.
+> Think of a car rental agency at an airport. Instead of manufacturing a new car every time someone needs one and scrapping it when they're done, the agency maintains a fleet of ready-to-drive cars. When you arrive, you check out an available car from the lot. If all cars are rented out, you wait or get referred elsewhere. When your trip is over, you return the car, it gets cleaned up, and it's ready for the next customer. The agency might keep 50 cars — enough to handle normal demand without wasting money on thousands of cars that would sit idle in the lot.
 
 ## When You Need It
 - Managing expensive resources like database connections, thread pools, or network sockets

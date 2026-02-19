@@ -18,7 +18,7 @@ Loading high-resolution images from disk is expensive. You want to display a pla
 ## Real-World Analogy
 
 {: .note }
-> Think of a credit card. It's a proxy for your bank account. It has the same interface as cash (you pay with it), but behind the scenes it adds security checks, spending limits, and transaction logging. The store doesn't interact with your bank directly — the credit card handles it. A proxy stands in for something else and controls access to it.
+> Think of a receptionist or personal assistant who screens calls for a busy executive. Callers dial the same phone number expecting to reach the executive, but the assistant answers first. The assistant can check who's calling (access control), log every call (monitoring), take a message if the executive is unavailable (lazy loading), or connect the caller directly for urgent matters. The caller interacts with the same "call" interface, but the assistant controls and manages access to the real person behind the scenes.
 
 ## When You Need It
 

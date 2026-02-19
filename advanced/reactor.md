@@ -16,7 +16,7 @@ Creating a thread for each network connection or I/O source doesn't scale to tho
 ## Real-World Analogy
 
 {: .note }
-> Picture a hotel concierge at a desk monitoring multiple communication channels: a phone system with many lines, a fax machine, and a computer with email. Rather than hiring one person per phone line (thread-per-connection), the concierge watches all channels simultaneously. When a phone lights up, they answer it, handle the request quickly, and return to monitoring. When a fax arrives, they process it and go back to watching. The concierge never sits idle waiting on any single channel—they're always ready to handle whichever channel has activity. This single person efficiently manages hundreds of potential connections by responding only when events actually occur.
+> Picture a 911 dispatcher monitoring multiple emergency phone lines simultaneously. Rather than hiring one dispatcher per phone line (thread-per-connection), a single dispatcher watches a switchboard of lines. When a line lights up, they answer it, quickly gather the critical info, dispatch the right responders, and return to monitoring the board. They never sit idle waiting for one caller to finish describing their situation while other lines ring — they handle each event promptly and move on. This single dispatcher efficiently manages dozens of incoming calls by responding only when events actually occur.
 
 ## When You Need It
 - Building network servers that must handle thousands of concurrent connections efficiently

@@ -18,7 +18,7 @@ You need to evaluate expressions or statements written in a simple language or n
 ## Real-World Analogy
 
 {: .note }
-> Think of a calculator. When you type `3 + 5 - 2`, the calculator doesn't see it as one blob of text. It breaks it into pieces: the number 3, the plus operator, the number 5, the minus operator, the number 2. Each piece knows how to "interpret" itself — a number just returns its value, and an operator combines two results. The calculator builds a little tree of these pieces and evaluates it from the bottom up.
+> Think of reading sheet music. A musician sees symbols on a page — a whole note, a half note, a rest, a sharp — and each symbol knows how to "interpret" itself into sound or silence. A whole note means "play for four beats," a rest means "stay silent," and a sharp means "raise the pitch." Complex passages combine these symbols into measures, phrases, and movements — forming a tree-like structure that the musician evaluates from individual notes up to the full piece. The sheet music is the language, and the musician is the interpreter who gives it meaning.
 
 ## When You Need It
 

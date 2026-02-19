@@ -16,7 +16,7 @@ Traditional UI code often mixes presentation logic, business logic, and state ma
 ## Real-World Analogy
 
 {: .note }
-> Imagine a news anchor reading from a teleprompter. The anchor (View) doesn't decide what to say—they simply display whatever appears on the teleprompter (ViewModel). The teleprompter automatically updates as the production team (Model) edits the script. The anchor doesn't need to know where the words come from or how they're generated; there's a two-way binding where the anchor reads what's displayed, and if the anchor goes off-script, the teleprompter can update to reflect the improvisation. The anchor focuses purely on presentation, while the content and logic remain separate.
+> Think of a stock ticker display board in a trading floor. The raw market data feed (Model) streams live prices, volumes, and trades. A display controller (ViewModel) takes that raw data and formats it — calculating percentage changes, highlighting stocks that crossed thresholds, and deciding which tickers to show. The display board (View) simply renders whatever the controller provides, with no knowledge of market data formats. When a trader taps a stock on the board to place an order, that input flows back through the controller to the trading system. The board is purely visual, the controller handles all presentation logic, and the data feed knows nothing about screens.
 
 ## When You Need It
 - You're building applications with complex UI that needs to be testable without instantiating UI components

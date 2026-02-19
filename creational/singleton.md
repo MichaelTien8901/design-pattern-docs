@@ -18,7 +18,7 @@ Some classes should have exactly one instance — a database connection pool, a 
 ## Real-World Analogy
 
 {: .note }
-> Think of a country's government — there's only one president at a time. No matter who asks "who's the president?", everyone gets the same answer. You can't just create a second president on your own. The position is globally accessible and guaranteed to be unique. That's a Singleton — one instance, one global access point.
+> Think of a country's emergency phone number, like 911. There's exactly one number, everyone knows it, and you can't just create a second one. No matter who dials it or from where, they all reach the same system. It was established once and is globally accessible to everyone — that's a Singleton.
 
 ## When You Need It
 
